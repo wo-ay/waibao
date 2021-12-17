@@ -1,19 +1,28 @@
 <template>
+<!--  <head>-->
+<!--    <link rel="stylesheet" href="//at.alicdn.com/t/font_3024431_clhx7psk90e.css">-->
+<!--  </head>-->
   <footer class="footer_guide border-1px">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3024431_clhx7psk90e.css">
     <div class="guide_item" @click="goto('/home')" :class="{on: isCurrent('/home')}">
       <span class="item_icon">
-        <i class="iconfont iconicon"></i>
+        <i class="iconfont icon-shouye"></i>
       </span>
       <span>首页</span>
     </div>
 
     <div class="guide_item" @click="goto('/wrong')" :class="{on: isCurrent('/wrong')}">
       <span class="item_icon">
-        <i class="iconfont iconcuoti"></i>
+        <i class="iconfont icon-cuotiku"></i>
       </span>
       <span>错题</span>
     </div>
-
+    <div class="guide_item" @click="goto('/discussion')" :class="{on: isCurrent('/discussion')}">
+      <span class="item_icon">
+        <i class="iconfont icon-taolunqu"></i>
+      </span>
+      <span>讨论</span>
+    </div>
     <div class="guide_item" @click="goto('/search')" :class="{on: isCurrent('/search')}">
       <span class="item_icon">
         <i class="iconfont iconsousuo"></i>
@@ -23,7 +32,7 @@
 
     <div class="guide_item" @click="goto('/profile')" :class="{on: isCurrent('/profile')}">
       <span class="item_icon">
-        <i class="iconfont icongeren"></i>
+        <i class="iconfont icon-wo"></i>
       </span>
       <span>我的</span>
     </div>

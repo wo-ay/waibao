@@ -43,9 +43,9 @@
       <div class="sudoku_item " :class="{opacity:curSelect===item.langId, recommend:item.isRecommend == '1', 'first_recommend':item.isRecommend == '1' && index == 0}"
            v-for="(item,index) in languagesInfo"
            :key="index" @touchstart="touchstart(item.langId)" @touchend="touchend" @click="toPaper(item.langId)">
-        <img :src=langImg[index].imgSrc  height="50" >
+<!--        <img :src=langImg[index].imgSrc  height="50" >-->
 <!--        <img :src=langImg[index].imgSrc width="60" height="50" >-->
-<!--        <img :src="item.langImgSrc" width="40" height="40" >-->
+        <img :src="item.langImgSrc" width="40" height="40" >
         {{item.langName}}
       </div>
     </div>
@@ -87,14 +87,6 @@ export default {
       currentDate: new Date(),
       curSelect: null,
       alreadyClock: false,
-      // lunbo: [
-      //   {'imgId': 1, 'imgTitle': '轮播图1', 'imgSrc': 'http://cms-bucket.ws.126.net/2021/1213/8cfb02b2p00r41fj700buc000ow009vc.png', 'imgCreateTime': '2019-03-04T17:48:22.000+0000', 'ano': 123456, 'admName': '小张'},
-      //   {'imgId': 2, 'imgTitle': '轮播图2', 'imgSrc': 'http://edu-image.nosdn.127.net/7a6b20371fec4deb9749b23f51ec9844.png?imageView&quality=100&type=webp', 'imgCreateTime': '2019-03-04T17:48:45.000+0000', 'ano': 123456, 'admName': '小张'},
-      //   {'imgId': 3, 'imgTitle': '轮播图3', 'imgSrc': 'http://edu-image.nosdn.127.net/ea6f481e3edf4a63bec94366ff3492df.png?imageView&quality=100&thumbnail=1522y720', 'imgCreateTime': '2019-03-04T17:49:03.000+0000', 'ano': 123456, 'admName': '小张'},
-      //   {'imgId': 4, 'imgTitle': '轮播图4', 'imgSrc': 'https://images.ctfassets.net/18pi2fb74tmp/4xA4DyCYikCiqsuqe26cEG/e83b7f05388bf6600db0eb27e0fc8450/2dc9c25f-a29c-4ed6-9a02-1f424f85e450.jpg', 'imgCreateTime': '2019-03-04T17:49:17.000+0000', 'ano': 123456, 'admName': '小张'},
-      //   // {'imgId': 5, 'imgTitle': '测试添加轮播图1', 'imgSrc': 'http://qiniu.maweitao.top/programImages/8f7a39f1-b732-4cf5-b26a-b9c5c70ff272', 'imgCreateTime': '2019-04-20T09:18:40.000+0000', 'ano': 123456, 'admName': '小张'},
-      //   // {'imgId': 6, 'imgTitle': '测试添加轮播图2', 'imgSrc': 'http://qiniu.maweitao.top/programImages/b4bcbbbb-599c-4a6a-b055-4f8bef73e25a', 'imgCreateTime': '2019-04-20T09:19:01.000+0000', 'ano': 123456, 'admName': '小张'}
-      // ],
       langImg: [
         {
           imgSrc: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.qinxue365.com%2Fuploads%2Fallimg%2F1802%2F4092-1P226111645106.gif&refer=http%3A%2F%2Fimg.qinxue365.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642047628&t=9b6f0b5e0faf6aff7abce99dae471a59'

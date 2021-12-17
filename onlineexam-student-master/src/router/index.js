@@ -38,6 +38,7 @@ const Home = () => import('@/pages/Home/Home.vue')
 const Wrong = () => import('@/pages/Wrong/Wrong.vue')
 const Search = () => import('@/pages/Search/Search.vue')
 const Profile = () => import('@/pages/Profile/Profile.vue')
+const Discussion = () => import('@/pages/Discussion/Discussion.vue')
 
 Vue.use(VueRouter)
 
@@ -52,6 +53,16 @@ export default new VueRouter({
     },
     {
       path: '/home',
+      name: 'Home',
+      component: Home,
+      // 此时的Home等都是返回路由组件的函数，只有请求对应的路由路径时(第一次)才会执行此函数并加载路由组件
+      // 标识此路由是否显示FooterGuide
+      meta: {
+        showFooter: true
+      }
+    },
+    {
+      path: '/h',
       name: 'Home',
       component: Home,
       // 此时的Home等都是返回路由组件的函数，只有请求对应的路由路径时(第一次)才会执行此函数并加载路由组件
@@ -91,6 +102,14 @@ export default new VueRouter({
       path: '/wrong',
       name: 'Wrong',
       component: Wrong,
+      meta: {
+        showFooter: true
+      }
+    },
+    {
+      path: '/discussion',
+      name: 'Discussion',
+      component: Discussion,
       meta: {
         showFooter: true
       }
